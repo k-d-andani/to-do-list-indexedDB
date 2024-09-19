@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>To Do</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+
+  <body>
+    <form id="toDoForm">
+      <div class="form">
+        <input
+          type="text"
+          name="title"
+          id="titleInput"
+          placeholder="Title"
+          required
+        />
+        <input
+          type="date"
+          name="date"
+          id="dateInput"
+          placeholder="Deadline"
+          required
+        />
+        <textarea
+          name="description"
+          id="descriptionTextArea"
+          placeholder="Description"
+          required
+        ></textarea>
+        <button id="submit" type="submit">Create</button>
+      </div>
+    </form>
+
+    <div id="filterContainer" class="d-flex gap-3 flex-wrap form">
+        <input
+          type="text"
+          name="titleFilter"
+          id="filterTitleInput"
+          placeholder="Title"
+        />
+
+        <input
+          type="date"
+          name="dateFilter"
+          id="dateFilterInput"
+          placeholder="Deadline"
+          required
+        />
+      </div>
+    </div>
+
+    <div id="taskContainer" class="d-flex gap-3 flex-wrap"></div>
+
+    <label id="openEditModal" for="editToDo"></label>
+
+    <input class="modal-state" id="editToDo" type="checkbox" />
+
+    <div class="modal">
+      <label class="modal__bg" for="editToDo"></label>
+      <div class="modal__inner form">
+        <label id="closeModel" class="modal__close" for="editToDo"></label>
+
+        <!-- <div class="form"> -->
+        <form autocomplete="off" id="editForm">
+          <input id="editTitle" class="input" type="text" />
+
+          <textarea id="editDescription" class="textarea"></textarea>
+
+          <input id="editDeadline" class="input" type="date" />
+
+          <input type="checkbox" id="editDone" />
+
+          <button id="btnsave" type="submit">Save Changes</button>
+        </form>
+        <!-- </div> -->
+      </div>
+    </div>
+  </body>
+</html>

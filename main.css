@@ -1,0 +1,48 @@
+@import url("./form.css");
+@import url("./modal.css");
+@import url("./card.css");
+
+:root {
+  --primary-color: #02343f;
+  --secondary-color: #968107;
+  --font-color-1: #d9ded1;
+  --font-color-2: #02343f;
+  --font-color-3: #59bad0;
+  --bg-color: #f2eadd;
+  --heading-color: #2b5844;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(
+    115deg,
+    var(--secondary-color),
+    10%,
+    var(--primary-color) 90%
+  );
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
